@@ -1,0 +1,5 @@
+[
+    {"name": "SpeedHack", "description": "Adjust game speed.", "url": "mods/speedhack.geode"},
+    {"name": "Noclip", "description": "Pass through obstacles.", "url": "mods/noclip.geode"},
+    {"name": "CustomIcons", "description": "New icons for your cube.", "url": "mods/customicons.geode"}
+]
