@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashHakz - Geometry Dash Mods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .mod-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .mod-card h3 {
+            margin: 0;
+        }
+        .mod-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DashHakz - Geometry Dash Mods</h1>
+        <p>Browse and download mods for Geometry Dash. Install the DashHakz mod loader to use these mods!</p>
+        <div id="mod-list"></div>
+    </div>
+    <script>
+        // Sample mod data (replace with a backend or static JSON file)
+        const mods = [
+            { name: "SpeedHack", description: "Adjust game speed.", url: "mods/speedhack.geode" },
+            { name: "Noclip", description: "Pass through obstacles.", url: "mods/noclip.geode" },
+            { name: "CustomIcons", description: "New icons for your cube.", url: "mods/customicons.geode" }
+        ];
+
+        // Display mods
+        const modList = document.getElementById("mod-list");
+        mods.forEach(mod => {
+            const modCard = document.createElement("div");
+            modCard.className = "mod-card";
+            modCard.innerHTML = `
+                <h3>${mod.name}</h3>
+                <p>${mod.description}</p>
+                <a href="${mod.url}" download>Download</a>
+            `;
+            modList.appendChild(modCard);
+        });
+    </script>
+</body>
+</html>
